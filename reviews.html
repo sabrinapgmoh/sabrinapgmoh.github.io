@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Florists</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/Screenshot 2024-09-06 at 00.22.09.png" type="image/x-icon">
+</head>
+<body>
+    <header id="header">
+        <img id = "pic1" src="images/Screenshot 2024-09-06 at 00.22.09.png" alt="Image 1">
+        <h1 id="site-title">Bloom Florists</h1>
+        <img id = "pic2" src="images/Screenshot 2024-09-06 at 00.22.09.png" alt="Image 1">
+        <nav id="main-nav">
+            <ul id="nav-list">
+                <li><a href="home.html" id="home-link">Home</a></li>
+                <li><a href="about.html" id="home-link">About Us</a></li>
+                <li><a href="ourservices.html" id="services-link">Our Services</a></li>
+                <li><a href="order.html" id="order-link">Place an Order</a></li>
+                <li><a href="reviews.html" id="reviews-link">Reviews</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="review-container">
+        <h2 id="order-title">What Our Customers Say</h2>
+    <section id = "review" class="review-slide">
+        <img src="images/Screenshot 2024-09-06 at 00.35.09.png" alt="Review 1">
+        <p>⭐⭐⭐⭐⭐<br><br>
+            "I couldn't have been happier with the flowers from Bloom Florist for my wedding! The vibrant mix of peonies, roses, and lilies in soft pinks and whites created the perfect romantic ambiance for our big day. The arrangements were not only stunning but also lasted well throughout the event. The team at Bloom Florist was incredibly helpful and attentive, ensuring everything was just right. Thank you for making our wedding day so beautiful!" <br><br>
+            — Naomi R.</p>
+    </section>
+    <section id = "review" class="review-slide">
+        <img src="images/Screenshot 2024-09-06 at 00.42.45.png" alt="Review 2">
+        <p>⭐⭐⭐⭐⭐<br><br>
+            "Bloom Florist truly made my birthday special! I ordered a bouquet featuring bright sunflowers, cheerful daisies, and vivid gerbera daisies. The vibrant colors and fresh, lively flowers brought so much joy to the celebration. The delivery was timely, and the arrangement was even more beautiful than I had imagined. The quality and service exceeded my expectations. Highly recommend for any celebration!"
+            <br><br>— John M.    </section>
+    <section id = "review" class="review-slide">
+        <img src="images/Screenshot 2024-09-06 at 00.43.44.png" alt="Review 3">
+        <p>⭐⭐⭐⭐⭐<br><br>
+            "During a difficult time, Bloom Florist provided a beautiful and respectful floral arrangement for my grandmother's funeral. The elegant mix of white roses, calla lilies, and delicate baby's breath was both soothing and fitting for the occasion. The compassion and care from the staff were evident in the thoughtful design and prompt delivery. Their flowers helped us honor her memory with grace and beauty. Thank you for your kindness and support."
+<br><br>— Linda K.</p>
+    </section>
+    <section id = "review" class="review-slide">
+        <img src="images/Screenshot 2024-09-06 at 00.44.57.png" alt="Review 4">
+        <p>⭐⭐⭐⭐⭐<br><br>
+            "I wanted something truly special for our anniversary, and Bloom Florist delivered beyond my expectations. The lush bouquet of red roses, elegant orchids, and fragrant lavender was a perfect representation of our love and appreciation. The attention to detail and personal touch in the arrangement made it a memorable gift. My partner was overjoyed, and we both appreciated the outstanding service. Bloom Florist is our go-to for all future celebrations!"
+<br><br>— Michael T.</p>
+    </section>
+    <section id = "review" class="review-slide">
+        <img src="images/Screenshot 2024-09-06 at 00.45.32.png" alt="Review 5">
+        <p>⭐⭐⭐⭐⭐<br><br>
+            "Bloom Florist did an exceptional job with the floral arrangements for our company's annual gala. The sophisticated centerpieces, featuring white orchids, deep blue hydrangeas, and silver brunia, added a touch of class to the event. The professionalism and creativity of the team were impressive, and the flowers were a highlight of the evening. We received numerous compliments from our guests. Thank you, Bloom Florist, for making our event memorable!"
+<br> <br>— Sarah W.</p>
+    </section>
+    <div style="text-align:center">
+        <span class="nav-dot"></span>
+        <span class="nav-dot"></span>
+        <span class="nav-dot"></span>
+        <span class="nav-dot"></span>
+        <span class="nav-dot"></span>
+        <script>
+            let currentIndex = 0;
+        
+            const reviews = document.querySelectorAll('#review');
+            const totalReviews = reviews.length;
+        
+            function showReview(index) {
+                reviews.forEach((review, i) => {
+                    review.style.display = (i === index) ? 'flex' : 'none';
+                });
+            }
+        
+            function nextReview() {
+                currentIndex = (currentIndex + 1) % totalReviews;
+                showReview(currentIndex);
+            }
+        
+            function prevReview() {
+                currentIndex = (currentIndex - 1 + totalReviews) % totalReviews;
+                showReview(currentIndex);
+            }
+        
+            // Show the first review initially
+            showReview(currentIndex);
+        
+            // Change review every 5 seconds
+            setInterval(nextReview, 5000);
+        
+            // Add buttons for manual navigation
+            document.addEventListener('DOMContentLoaded', () => {
+                const controlsContainer = document.createElement('div');
+                controlsContainer.className = 'controls-container';
+        
+                const prevButton = document.createElement('button');
+                prevButton.textContent = 'Previous';
+                prevButton.className = 'nav-button prev';
+                prevButton.onclick = prevReview;
+                controlsContainer.appendChild(prevButton);
+        
+                const nextButton = document.createElement('button');
+                nextButton.textContent = 'Next';
+                nextButton.className = 'nav-button next';
+                nextButton.onclick = nextReview;
+                controlsContainer.appendChild(nextButton);
+        
+                document.body.appendChild(controlsContainer);
+            });
+        </script>
+    </div>
+</div>
+<section id="order-section">
+    <h2 id="order-title">Place Your Order Today!</h2>
+    <form id="order-form" action="" method="POST">
+        <label for="first_name">First Name:</label>
+        <input type="text" id="first_name" name="first_name" required>
+        
+        <label for="last_name">Last Name:</label>
+        <input type="text" id="last_name" name="last_name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="address">Delivery Address:</label>
+        <textarea id="address" name="address" rows="4"></textarea>
+        
+        <label for="occasion">Occasion:</label>
+        <div>
+            <input type="radio" id="birthday" name="occasion" value="birthday">
+            <label for="birthday">Birthday</label>
+            <input type="radio" id="wedding" name="occasion" value="wedding">
+            <label for="wedding">Wedding</label>
+            <input type="radio" id="anniversary" name="occasion" value="anniversary">
+            <label for="anniversary">Anniversary</label>
+            <input type="radio" id="funeral" name="occasion" value="funeral">
+            <label for="funeral">Funeral</label>
+        </div>
+        
+        <label for="colour">Main Colour:</label>
+        <select id="colour" name="colour">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="white">White</option>
+            <option value="pink">Pink</option>
+            <option value="purple">Purple</option>
+            <option value="orange">Orange</option>
+        </select>
+        
+        <label for="seccolour">Secondary Colour:</label>
+        <select id="seccolour" name="seccolour">
+            <option value="red">Red</option>
+            <option value="yellow">Yellow</option>
+            <option value="white">White</option>
+            <option value="pink">Pink</option>
+            <option value="purple">Purple</option>
+            <option value="orange">Orange</option>
+        </select>
+        
+        <label for="bio">Personalised Message:</label>
+        <textarea id="bio" name="bio" rows="3"></textarea>
+        
+        <input type="checkbox" id="subscribe" name="subscribe">
+        <label for="subscribe">Would you like Speedy Delivery?</label>
+        
+        <input type="submit" value="Submit">
+    </form>
+</section>
+</body>
+    <footer id="footer">
+        <section id="newsletter-section">
+        <h2>Sign Up for Our Newsletter</h2>
+        <form action="" method="POST">
+        <label for="newsletter-email">Email Address:</label>
+        <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Enter your email" required>
+        <input type="submit" value="Subscribe">
+    </form>
+</section>
+    <section id="information-section">
+        <h2>Information</h2>
+        <ul>
+            <li><a href="home.html">Privacy Policy</a></li>
+            <li><a href="home.html">Cookies</a></li>
+            <li><a href="home.html">Terms and Conditions</a></li>
+        </ul>
+    </section>
+    </footer>
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="">
+        <div id="caption"></div>
+    </div>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bloom Florists</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/Screenshot 2024-09-06 at 00.22.09.png" type="image/x-icon">
+
+</head>
+<header id="header">
+    <img id = "pic1" src="images/Screenshot 2024-09-06 at 00.22.09.png" alt="Image 1">
+    <h1 id="site-title">Bloom Florists</h1>
+    <img id = "pic2" src="images/Screenshot 2024-09-06 at 00.22.09.png" alt="Image 1">
+    <nav id="main-nav">
+        <ul id="nav-list">
+            <li><a href="home.html" id="home-link">Home</a></li>
+            <li><a href="about.html" id="home-link">About Us</a></li>
+            <li><a href="ourservices.html" id="services-link">Our Services</a></li>
+            <li><a href="order.html" id="order-link">Place an Order</a></li>
+                <li><a href="reviews.html" id="reviews-link">Reviews</a></li>
+        </ul>
+    </nav>
+</header>
+<body>
+    <section id="order-section">
+        <h2 id="order-title">Place an Order</h2>
+        <form id="order-form" action="" method="POST">
+            <label for="first_name">First Name:</label>
+            <input type="text" id="first_name" name="first_name" required>
+            
+            <label for="last_name">Last Name:</label>
+            <input type="text" id="last_name" name="last_name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="address">Delivery Address:</label>
+            <textarea id="address" name="address" rows="4"></textarea>
+            
+            <label for="occasion">Occasion:</label>
+            <div>
+                <input type="radio" id="birthday" name="occasion" value="birthday">
+                <label for="birthday">Birthday</label>
+                <input type="radio" id="wedding" name="occasion" value="wedding">
+                <label for="wedding">Wedding</label>
+                <input type="radio" id="anniversary" name="occasion" value="anniversary">
+                <label for="anniversary">Anniversary</label>
+                <input type="radio" id="funeral" name="occasion" value="funeral">
+                <label for="funeral">Funeral</label>
+            </div>
+            
+            <label for="colour">Main Colour:</label>
+            <select id="colour" name="colour">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="white">White</option>
+                <option value="pink">Pink</option>
+                <option value="purple">Purple</option>
+                <option value="orange">Orange</option>
+            </select>
+            
+            <label for="seccolour">Secondary Colour:</label>
+            <select id="seccolour" name="seccolour">
+                <option value="red">Red</option>
+                <option value="yellow">Yellow</option>
+                <option value="white">White</option>
+                <option value="pink">Pink</option>
+                <option value="purple">Purple</option>
+                <option value="orange">Orange</option>
+            </select>
+            
+            <label for="bio">Personalised Message:</label>
+            <textarea id="bio" name="bio" rows="3"></textarea>
+            
+            <input type="checkbox" id="subscribe" name="subscribe">
+            <label for="subscribe">Would you like Speedy Delivery?</label>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</body>
+    <footer id="footer">
+            <section id="newsletter-section">
+            <h2>Sign Up for Our Newsletter</h2>
+            <form action="" method="POST">
+            <label for="newsletter-email">Email Address:</label>
+            <input type="email" id="newsletter-email" name="newsletter-email" placeholder="Enter your email" required>
+            <input type="submit" value="Subscribe">
+        </form>
+    </section>
+        <section id="information-section">
+            <h2>Information</h2>
+            <ul>
+                <li><a href="home.html">Privacy Policy</a></li>
+            <li><a href="home.html">Cookies</a></li>
+            <li><a href="home.html">Terms and Conditions</a></li>
+            </ul>
+        </section>
+    </footer>
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" src="">
+        <div id="caption"></div>
+    </div>
+</html>

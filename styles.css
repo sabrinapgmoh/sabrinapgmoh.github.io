@@ -1,0 +1,657 @@
+/* General Styling */
+body {
+    font-family: monospace, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #d8f8d8;
+    padding: 1rem;
+    text-align: center;
+}
+
+#site-title {
+    color: #b33f6c;
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+#main-nav {
+    margin-top: 0.5rem;
+}
+
+#nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#nav-list li {
+    margin: 0;
+}
+
+#nav-list a {
+    text-decoration: none;
+    color: #b33f6c;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#nav-list a:hover,
+#nav-list a.active {
+    color: #a42c5c;
+}
+
+/* About Us Section */
+#about-us {
+    padding: 2rem;
+    background-color: #fff;
+    border-bottom: 5px solid #d8f8d8;
+    text-align: center; 
+}
+
+#about-title {
+    color: #b33f6c;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#about-main {
+    line-height: 1.6;
+    margin-top: 1rem;
+    font-size: 1rem;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.gallery img {
+    width: calc(33% - 1rem);
+    max-width: 100%;
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* Services Section with Column Layout */
+#services {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+    text-align: center; 
+    max-width: 1200px; 
+    margin: 0 auto; 
+}
+
+#services h2 {
+    color: #b33f6c;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+section {
+    background-color: #fff;
+    border: 1px solid #d8f8d8;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    margin: 0 auto; 
+    max-width: 800px; 
+    width: 100%; 
+}
+
+/* Adjust the images inside service sections */
+section img {
+    width: 100%;
+    max-width: 200px; 
+    height: auto;
+    margin: 0.5rem auto; 
+    display: block;
+}
+
+/* Footer Styling */
+#footer {
+    background-color: #d8f8d8;
+    padding: 2rem;
+    text-align: center;
+}
+
+/* Order Section */
+#order-section {
+    background-color: #fff;
+    border: 1px solid #d8f8d8;
+    padding: 2rem;
+    margin: 1rem auto;
+    max-width: 90%;
+    border-radius: 0.5rem;
+}
+
+#order-title {
+    color: #b33f6c;
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Flexbox for Form */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+form label {
+    display: block;
+    font-size: 1rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea,
+form select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form input[type="submit"] {
+    background-color: #b33f6c;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+form input[type="submit"]:hover {
+    background-color: #a42c5c;
+}
+
+/* Lightbox Styling */
+.lightbox {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.lightbox-content {
+    max-width: 80%;
+    max-height: 80%;
+    margin: auto;
+    display: block;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: #fff;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#caption {
+    text-align: center;
+    color: #fff;
+    padding: 10px 0;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    #nav-list {
+        flex-direction: column;
+    }
+
+    .gallery img {
+        width: calc(50% - 1rem);
+    }
+
+    #services {
+        padding: 1rem;
+        max-width: 100%; 
+    }
+
+    section {
+        max-width: 100%; 
+    }
+
+    #about-title, #services h2, #order-title {
+        font-size: 1.25rem;
+    }
+
+    form input[type="submit"] {
+        width: 100%;
+    }
+}
+
+    /* Footer Styling */
+#footer {
+    background-color: #d8f8d8; 
+    padding: 2rem 1.5rem; 
+    color: #333; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    align-items: start; 
+}
+
+/* Newsletter Section Styling */
+#newsletter-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    padding: 1rem;
+    background-color: transparent;
+}
+
+#newsletter-section h2 {
+    margin-top: 0;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+#newsletter-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+#newsletter-section input[type="email"] {
+    width: 80%;
+    max-width: 300px;
+    padding: 0.5rem; 
+    border-radius: 0.5rem;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+#newsletter-section input[type="submit"] {
+    background-color: #73c687;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem; 
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#newsletter-section input[type="submit"]:hover {
+    background-color: #65b578;
+}
+
+
+/* Information Section Styling */
+#information-section {
+    padding: 1rem;
+    text-align: left; 
+}
+
+#information-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+#information-section ul {
+    list-style-type: none;
+    padding: 0;
+    font-size: 1rem;
+}
+
+#information-section ul li {
+    margin-bottom: 0.5rem;
+}
+
+#information-section ul li a {
+    text-decoration: none;
+    color: #73c687;
+    font-weight: bold;
+}
+
+#information-section ul li a:hover {
+    color: #00431c;
+}
+
+/* Make footer responsive */
+@media (max-width: 768px) {
+    #footer {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    #newsletter-section,
+    #information-section {
+        max-width: 100%;
+    }
+}
+
+.carousel {
+    position: relative;
+    max-width: 400px;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.prev {
+    left: 10px;
+}
+
+.next {
+    right: 10px;
+}
+
+#main-content {
+    display: flex;
+    gap: 2rem; 
+    padding: 2rem; /* Padding around the container */
+}
+
+/* Styling for carousel container */
+#carousel-container {
+    flex: 1; 
+    max-width: 50%; 
+}
+
+/* Styling for article */
+#intro {
+    flex: 1; 
+    max-width: 70%; 
+    padding: 1rem; 
+    background-color: #fff; 
+    border-radius: 0.5rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Ensure the article text is well-spaced */
+#intro p {
+    margin-bottom: 1rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    #main-content {
+        flex-direction: column;
+        align-items: center; 
+    }
+
+    #carousel-container,
+    #intro {
+        max-width: 100%;
+    }
+}
+
+#header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out items */
+    padding: 1rem;
+    background-color: #d8f8d8; /* Example background color */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+/* Site Title Styling */
+#site-title {
+    font-size: 2rem;
+    color: #b33f6c; /* Example color */
+    margin: 0;
+    text-align: center; /* Center the title */
+    flex: 1; /* Allow the title to take up remaining space */
+}
+
+/* Image Styling */
+#header img {
+    width: 175px; /* Adjust the width as needed */
+    height: auto;
+    margin: 0 0.5rem; /* Adjust the margin to reduce space between images and title */
+}
+
+/* Navigation Styling */
+#main-nav {
+    width: 100%; /* Ensure nav takes full width */
+    background-color: #fff; /* Example background color */
+    padding: 0.5rem 0; /* Adjust padding as needed */
+}
+
+#nav-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 0;
+}
+
+#nav-list li {
+    margin: 0;
+}
+
+#nav-list a {
+    text-decoration: none;
+    color: #b33f6c;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#nav-list a:hover,
+#nav-list a.active {
+    color: #a42c5c;
+}
+
+/* Review Section Styling */
+#review {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center text and images horizontally */
+    text-align: center; /* Center text */
+    border: 1px solid #ddd; /* Add a light border */
+    border-radius: 0.5rem; /* Rounded corners */
+    padding: 1rem;
+    margin: 1rem auto; /* Center containers horizontally */
+    max-width: 900px; /* Set a maximum width */
+    background-color: #fff; /* White background */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+#review img {
+    width: 250px; /* Set the width of images */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 1rem; /* Space between image and text */
+}
+
+#review p {
+    font-family: Arial, sans-serif; /* Set the font to Arial */
+    font-size: 1rem; /* Set font size */
+    color: #333; /* Dark color for readability */
+}
+
+@media (max-width: 768px) {
+    #review {
+        flex-direction: column; /* Stack image and text on small screens */
+        align-items: flex-start;
+    }
+
+    #review img {
+        width: 100%; /* Ensure image fits well on smaller screens */
+    }
+}
+
+/* Slideshow Container */
+#review-container {
+    position: relative;
+    width: 100%;
+    max-width: 1000px; /* Adjust as needed */
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid #ddd; /* Light border for definition */
+    border-radius: 8px;
+}
+
+.review-slide {
+    display: none; /* Hide all slides by default */
+    padding: 1rem;
+    background-color: #f2f2f2; /* Light gray background for reviews */
+    border-radius: 8px;
+    border: 1px solid #ddd; /* Light border for definition */
+}
+
+.review-slide img {
+    width: 250px; /* Set the size of the images */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Rounded corners for the images */
+}
+
+.review-slide p {
+    font-size: 1rem; /* Adjust font size for readability */
+    line-height: 1.6;
+    color: #333;
+    margin: 0; /* Remove default margin */
+}
+
+
+/* Navigation dots */
+.nav-dot {
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active-dot {
+    background-color: #717171;
+}
+
+/* Container for navigation buttons */
+.controls-container {
+    display: flex;
+    justify-content: center; /* Center buttons horizontally */
+    gap: 1rem; /* Space between buttons */
+    margin: 2rem 0; /* Space above and below buttons */
+}
+
+/* Style for navigation buttons */
+.nav-button {
+    background-color: #b33f6c; /* Button background color */
+    color: #fff; /* Button text color */
+    border: none; /* Remove default border */
+    padding: 0.5rem 1rem; /* Button padding */
+    border-radius: 0.5rem; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-family: Arial, sans-serif; /* Font style */
+    font-size: 1rem; /* Font size */
+}
+
+.nav-button:hover {
+    background-color: #a42c5c; /* Darker background on hover */
+}
+
+#order-section {
+    text-align: center; /* Center-align text within the section */
+    padding: 2rem;
+    background-color: #fff;
+    border: 1px solid #d8f8d8;
+    border-radius: 0.5rem;
+    margin: 1rem auto;
+    max-width: 800px; /* Adjust width to your preference */
+}
+
+#order-title {
+    color: #b33f6c;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#order-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center-align form elements */
+    gap: 1rem; /* Space between form elements */
+}
+
+#order-form label {
+    font-size: 1rem;
+}
+
+#order-form input[type="text"],
+#order-form input[type="email"],
+#order-form textarea {
+    width: 100%;
+    max-width: 400px; /* Adjust max-width to your preference */
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+}
+
+#order-form input[type="submit"] {
+    background-color: #b33f6c;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#order-form input[type="submit"]:hover {
+    background-color: #a42c5c;
+}
+
